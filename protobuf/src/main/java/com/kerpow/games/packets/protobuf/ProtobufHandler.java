@@ -33,7 +33,8 @@ public final class ProtobufHandler {
                 return parser.parseFrom(data);
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
-                return null; //throw?
+                //TODO throw?
+                return null;
             }
         }
     }
