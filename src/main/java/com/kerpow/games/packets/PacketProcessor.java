@@ -42,6 +42,7 @@ public class PacketProcessor {
      * @throws MissingHandlerException If there is no message handler for this packet id
      * @throws MessageHandlerException If there is an error with the message handler for this packet id
      */
+    @SuppressWarnings("unchecked")
     public void processPacket(Object sender, Packet packet) throws MissingHandlerException, MessageHandlerException {
         Object message = decodePacket(packet);
         if (pipeline != null) {
